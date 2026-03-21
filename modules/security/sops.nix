@@ -9,7 +9,7 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
-  services.openssh.enable = lib.mkDefault true; # OpenSSH is required
+  services.openssh.generateHostKeys = lib.mkDefault true; # OpenSSH is required
   # for converting keys into sops keys, so set this as default.
 
   sops = {

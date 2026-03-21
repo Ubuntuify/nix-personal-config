@@ -8,6 +8,8 @@
 in {
   imports = [
     modules.hardware.wsl.nvidia
+    modules.security.sops
+    (outputs.lib.users.getNixUserModule "ryans")
   ];
 
   nixpkgs.overlays = [

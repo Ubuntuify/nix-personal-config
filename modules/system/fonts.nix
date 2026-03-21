@@ -22,6 +22,9 @@
     jetbrains-mono
   ];
 
+  fonts.fontconfig.enable = true;
+  fonts.fontconfig.useEmbeddedBitmaps = true;
+
   # Joypixels is a "fremium" emoji font, therefore requires a license agreement.
   nixpkgs.config.joypixels.acceptLicense = true;
 

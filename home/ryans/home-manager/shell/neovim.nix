@@ -83,7 +83,7 @@
             ++ (
               # Map the following to make every value given equivalent to:
               # vim.languages.${lang}.enabled = true; (for each and every string passed in the array)
-              builtins.map (x: {
+              map (x: {
                 name = x;
                 value = {enable = true;};
               })
@@ -94,7 +94,7 @@
           {
             nix.lsp.servers = ["nixd"];
           }
-          (mkLanguageConfig ["nix" "svelte" "ts" "rust" "python" "bash"])
+          (mkLanguageConfig ["nix" "svelte" "rust" "python" "bash"])
         ];
     };
   };

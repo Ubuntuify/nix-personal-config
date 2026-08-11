@@ -22,10 +22,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     cp -r * $out/share/themes/squared-gtk/
   '';
 
-  propagatedUserEnvPkgs = [
-    gtk-engine-murrine
-  ];
-
   meta = {
     description = "An elegant dark theme for Gnome with squared corners and an easy on the eyes color pallete";
     homepage = "https://www.gnome-look.org/p/2206255/";

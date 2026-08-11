@@ -29,10 +29,7 @@ in {
     };
   };
 
-  programs.fastfetch = {
-    enable = true;
-    package = pkgs.fastfetchMinimal;
-  };
+  programs.fastfetch.enable = true;
 
   programs.fd = {
     enable = true;

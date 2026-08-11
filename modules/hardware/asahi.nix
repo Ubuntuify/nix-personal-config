@@ -45,15 +45,15 @@
       mkPeripheralFirmwareDirectory = hash:
         pkgs.requireFile {
           inherit hash;
-          name = "asahi";
+          name = "vendorfw";
           hashMode = "recursive";
           message = ''
-            Linux on Apple Silicon requires proprietary firmware blobs taken from MacOS to function correctly, run the below command on your system, and if it doesn't work, try the following troubleshooting steps.
+                        Linux on Apple Silicon requires proprietary firmware blobs taken from MacOS to function correctly, run the below command on your system, and if it doesn't work, try the following troubleshooting steps.
+            Litefin
+                        nix-store --add-fixed sha256 --recursive <path-to-asahi-esp>/asahi
 
-            nix-store --add-fixed sha256 --recursive <path-to-asahi-esp>/asahi
-
-            #1) Is the hash of your firmware directory different from the one listed here? Check with `nix hash --algo sha256 <path-to-asahi-esp>/asahi`
-            #2) Is this your first install? Running this command on the installation environment won't work, and you'll have to first run without it and run it on the system itself before doing a switch.
+                        #1) Is the hash of your firmware directory different from the one listed here? Check with `nix hash --algo sha256 <path-to-asahi-esp>/asahi`
+                        #2) Is this your first install? Running this command on the installation environment won't work, and you'll have to first run without it and run it on the system itself before doing a switch.
           '';
         };
     in
@@ -65,7 +65,7 @@
     # Configurable parts for Apple Macbook quirks, such as the Touch Bar and the Notch on older and newer devices
     # respectively.
     hardware.apple.touchBar.enable = hasTouchBar;
-    boot.kernelParams = lib.optionals showNotch ["apple_dcp.show_notch=1"];
+    boot.kernelParams = lib.optionals showNotch ["appledrm.show_notch=1"];
 
     # Nix settings (enable custom substituter for apple-silicon)
     # see https://github.com/nix-community/nixos-apple-silicon/blob/main/docs/binary-cache.md for more info

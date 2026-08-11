@@ -165,6 +165,8 @@ in
             "browser.tabs.loadDivertedInBackground" = true;
             "browser.tabs.loadInBackground" = false;
             "sidebar.verticalTabs" = true;
+
+            "browser.nova.enabled" = true;
           };
         };
       };

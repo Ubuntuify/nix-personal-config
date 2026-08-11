@@ -60,7 +60,9 @@ lib.mkIf (
       name = "la-capitaine-icon-theme";
       package = pkgs.la-capitaine-icon-theme;
     };
-    theme.name = "squared-gtk";
-    theme.package = pkgs.callPackage ../../../../../pkgs/themes/squared-gtk.nix {};
+    gtk4.theme = {
+      name = "squared-gtk";
+      package = pkgs.callPackage ../../../../../pkgs/themes/squared-gtk.nix {};
+    };
   };
 }

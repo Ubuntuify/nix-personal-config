@@ -27,7 +27,7 @@ in {
       "rectangle"
       "calibre"
       "discord"
-      "griska/griska/neardrop"
+      "grishka/grishka/neardrop"
     ];
     masApps = {
       # These are Mac Store applications, defined with an ID.

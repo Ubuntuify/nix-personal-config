@@ -27,7 +27,7 @@ in {
   # Options required for Asahi (apple-silicon)'s hardware module, such as providing the firmware hash
   # for pure flakes, and other options like touch bar support.
   custom.asahi = {
-    firmwareHash = "sha256-9XuPmUICc+MBtRRX3SlIrLE1zspkR+OSaAtd0s6sWH4=";
+    firmwareHash = "sha256-5p9g6q8YdbTtc5YrjB4MInxxIiQNMbUoihLzyhSa7AQ=";
     hasTouchBar = true;
   };
 

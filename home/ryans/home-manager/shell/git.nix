@@ -100,7 +100,7 @@ in {
       then null
       else pinentryPackage;
     extraConfig = lib.mkIf (builtins.hasAttr "darwinConfig" args) ''
-      pinentry-program ${args.darwinConfig.homebrew.brewPrefix}/pinentry-touchid
+      pinentry-program ${args.darwinConfig.homebrew.prefix}/bin/pinentry-touchid
     '';
   };
 

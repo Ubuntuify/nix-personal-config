@@ -17,6 +17,6 @@ in {
   getCommonModulePaths = path: let
     files = builtins.readDir path;
   in
-    builtins.map (file: builtins.toPath (path + "/${file}")) (builtins.filter (obj: files.${obj} != "directory")
+    map (file: builtins.toPath (path + "/${file}")) (builtins.filter (obj: files.${obj} != "directory")
       (builtins.attrNames files));
 }

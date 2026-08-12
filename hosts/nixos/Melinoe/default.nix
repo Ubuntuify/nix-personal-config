@@ -1,7 +1,6 @@
 {
   outputs,
   modules,
-  config,
   ...
 }: let
   inherit (outputs) overlays;
@@ -38,6 +37,8 @@ in {
   services.xserver.enable = true;
   security.polkit.enable = true;
   programs.niri.enable = true;
+
+  programs.nix-ld.enable = true;
 
   system.stateVersion = "25.11";
 }

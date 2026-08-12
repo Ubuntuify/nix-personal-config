@@ -28,10 +28,9 @@
   # Joypixels is a "fremium" emoji font, therefore requires a license agreement.
   nixpkgs.config.joypixels.acceptLicense = true;
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "sf-pro"
-      "corefonts"
-      "vista-fonts"
-    ];
+  nixpkgs.config.allowUnfreePackages = [
+    "sf-pro"
+    "corefonts"
+    "vista-fonts"
+  ];
 }

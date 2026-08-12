@@ -20,7 +20,7 @@ in
     (outputs.lib.unsafeIf isDarwin {
       homebrew.casks = [
         "wacom-tablet" # OpenTabletDriver is not available on MacOS (Apple Silicon)
-        "krita"
+        "krita" # Use homebrew to install krita.
       ];
     })
   ]

@@ -7,5 +7,5 @@
   # of users you want to have in your system.
   #
   getUserCfgs = users: path: system:
-    builtins.map (user: (builtins.toPath path) + "/${user}/${system}/default.nix") users;
+    map (user: (builtins.toPath path) + "/${user}/${system}/default.nix") users;
 }

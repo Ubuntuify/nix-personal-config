@@ -59,6 +59,8 @@
     in
       mkPeripheralFirmwareDirectory firmwareHash;
 
+    nixpkgs.config.allowUnfreePackages = ["vendorfw"]; # Allows unfree firmware to be part of the install.
+
     # You can't touch EFI variables on an Asahi Linux system, and doing so will cause the switch to fail.
     boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
 

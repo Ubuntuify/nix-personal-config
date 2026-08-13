@@ -27,7 +27,7 @@ in {
   # for pure flakes, and other options like touch bar support.
   custom.asahi = {
     firmwareHash = "sha256-5p9g6q8YdbTtc5YrjB4MInxxIiQNMbUoihLzyhSa7AQ=";
-    hasTouchBar = true;
+    hasTouchBar = false; # broken
   };
 
   nixpkgs.overlays = [
@@ -39,6 +39,8 @@ in {
   programs.niri.enable = true;
 
   programs.nix-ld.enable = true;
+
+  services.upower.enable = true;
 
   system.stateVersion = "25.11";
 }

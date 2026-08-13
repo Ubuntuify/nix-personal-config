@@ -41,6 +41,7 @@
       url = "github:Nomadcxx/sysc-greet";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    dms.url = "github:AvengeMedia/DankMaterialShell";
 
     # Support modules (modules that connect to main system components to add patches for NixOS to work)
     nixos-wsl = {
